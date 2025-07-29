@@ -3,19 +3,49 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jose Laurencio | Portfolio</title>
+  <title>RoboCodex | Jose Laurencio Portfolio</title>
   <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/horizon" rel="stylesheet">
   <style>
-    .fade-in {
-      opacity: 0;
-      transform: translateY(30px);
-      animation: fadeInUp 1s ease-out forwards;
+    body {
+      font-family: 'Manrope', 'Segoe UI', 'Helvetica Neue', sans-serif;
+      background: #f5faff;
+      color: #1a237e;
+      margin: 0;
+      padding: 0;
     }
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: none;
-      }
+    header {
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(25, 118, 210, 0.07);
+      padding: 1.5rem 2rem 1rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+    header h1 {
+      font-family: 'Horizon', 'Manrope', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #1976d2;
+      letter-spacing: 1px;
+      margin: 0;
+      text-transform: uppercase;
+    }
+    nav {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 0.5rem;
+    }
+    nav a {
+      color: #1976d2;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+    nav a:hover {
+      color: #00bcd4;
     }
     .hero {
       display: flex;
@@ -35,6 +65,7 @@
       cursor: pointer;
       transition: background 0.2s;
       margin-top: 1rem;
+      font-family: 'Manrope', 'Segoe UI', 'Helvetica Neue', sans-serif;
     }
     .cta-btn:hover {
       background: #00bcd4;
@@ -48,20 +79,36 @@
     .feature {
       background: #fff;
       border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      box-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
       padding: 1.5rem;
       min-height: 180px;
       display: flex;
       flex-direction: column;
       gap: 0.5rem;
-      animation-delay: 0.2s;
+      border: 2px solid #e3eafc;
+      font-family: 'Manrope', 'Segoe UI', 'Helvetica Neue', sans-serif;
+    }
+    .feature h3 {
+      font-family: 'Horizon', 'Manrope', sans-serif;
+      color: #1976d2;
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
     }
     .quote {
       margin-top: 2.5rem;
       font-style: italic;
-      color: #1976d2;
+      color: #00bcd4;
       font-size: 1.1rem;
       text-align: center;
+    }
+    @media (max-width: 600px) {
+      header, main {
+        padding: 1rem;
+      }
+      .feature {
+        padding: 1rem;
+      }
     }
   </style>
   <script>
@@ -74,12 +121,16 @@
 </head>
 <body>
   <header>
-    <h1>Jose Laurencio</h1>
+    <div style="display:flex;align-items:center;gap:1rem;">
+      <img src="assets/robocodex-logo.png" alt="RoboCodex Logo" style="height:48px;width:auto;vertical-align:middle;">
+      <h1 style="margin:0;">RoboCodex | Jose Laurencio</h1>
+    </div>
     <nav>
       <a href="index.html">Home</a>
       <a href="portfolio.html">Portfolio</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
+      <a href="https://github.com/RoboCodexYT" target="_blank" style="color:#1976d2;font-weight:bold;">RoboCodex GitHub</a>
     </nav>
   </header>
   <main>
