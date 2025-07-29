@@ -5,8 +5,119 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio | Jose Laurencio</title>
   <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* --- Portfolio Page Custom Styles --- */
+    .portfolio-hero {
+      margin-top: 2.5rem;
+      text-align: center;
+    }
+    .portfolio-hero h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #1a237e;
+    }
+    .portfolio-hero p {
+      font-size: 1.2rem;
+      color: #555;
+      margin: 1.5rem auto 0 auto;
+      max-width: 600px;
+    }
+    .portfolio-quote {
+      margin-top: 1.5rem;
+      font-style: italic;
+      color: #1976d2;
+      font-size: 1.1rem;
+    }
+    .category-filter {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin: 2.5rem 0 1.5rem 0;
+    }
+    .category-btn {
+      background: #e3eafc;
+      color: #1976d2;
+      border: none;
+      padding: 0.5rem 1.5rem;
+      border-radius: 20px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+    }
+    .category-btn.active, .category-btn:hover {
+      background: #1976d2;
+      color: #fff;
+    }
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .project-card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      padding: 2rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      transition: transform 0.2s;
+    }
+    .project-card:hover {
+      transform: scale(1.025);
+    }
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+    .tag {
+      background: #e3eafc;
+      color: #1976d2;
+      border-radius: 12px;
+      padding: 0.2rem 0.8rem;
+      font-size: 0.9rem;
+    }
+    .project-links {
+      margin-top: 0.5rem;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .project-links a {
+      color: #1976d2;
+      text-decoration: underline;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .project-links a:hover {
+      color: #00bcd4;
+    }
+    .portfolio-cta {
+      text-align: center;
+      margin: 3rem 0 1rem 0;
+    }
+    .portfolio-cta a {
+      display: inline-block;
+      margin: 0 1rem;
+      background: #1976d2;
+      color: #fff;
+      padding: 0.75rem 2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .portfolio-cta a:hover {
+      background: #00bcd4;
+    }
+  </style>
 </head>
 <body>
+  <!-- Header and Navigation -->
   <header>
     <h1>Portfolio</h1>
     <nav>
@@ -16,27 +127,156 @@
     </nav>
   </header>
   <main>
-    <section>
-      <h2>Robotics Projects</h2>
-      <ul>
-        <li>RoboCodex Camp, FLL/FTC</li>
-        <li>FTC Programming, CAD/3D Design</li>
-        <li>FLL Team Mentorship</li>
-      </ul>
-      <h2>SaaS & App Ideas</h2>
-      <ul>
-        <li>Vertical Jump Tracker</li>
-        <li>Progress Tracker SaaS</li>
-      </ul>
-      <h2>Content Creation</h2>
-      <ul>
-        <li>YouTube Channel: Robotics, tutorials, business</li>
-      </ul>
-      <h2>Academic Excellence</h2>
-      <ul>
-        <li>Dual credit, math, physics, business interest</li>
-      </ul>
+    <!-- HERO SECTION: Big intro and quote -->
+    <section class="portfolio-hero">
+      <h1 class="text-4xl font-bold text-center">My Work</h1>
+      <p class="text-xl text-gray-600 text-center max-w-2xl mx-auto mt-4">
+        These are the projects that define me — from robotics and automation to SaaS tools and education. Each one shows my passion for building, leading, and solving real problems.
+      </p>
+      <div class="portfolio-quote">"I'm building for the future — one project at a time."</div>
     </section>
+
+    <!-- CATEGORY FILTER (static, for now) -->
+    <div class="category-filter">
+      <!-- To make these filter, add JS later. For now, just UI. -->
+      <button class="category-btn active">All</button>
+      <button class="category-btn">Robotics</button>
+      <button class="category-btn">SaaS</button>
+      <button class="category-btn">Content Creation</button>
+      <button class="category-btn">Education</button>
+      <button class="category-btn">Web Dev</button>
+    </div>
+
+    <!-- PROJECT GRID: Each card is a project. Edit below to add/remove projects. -->
+    <div class="project-grid">
+      <!-- Project Card: RoboCodex Robotics Camp -->
+      <div class="project-card">
+        <!-- Project Title -->
+        <h2>RoboCodex Robotics Camp</h2>
+        <!-- Project Description -->
+        <p>Designed and led a full FLL camp for students aged 10–14. Developed curriculum, branding, and materials for both beginner and advanced groups.</p>
+        <!-- Tech/Tools Used -->
+        <div class="project-tags">
+          <span class="tag">#Leadership</span>
+          <span class="tag">#Education</span>
+          <span class="tag">#Robotics</span>
+          <span class="tag">#FLL</span>
+          <span class="tag">#Curriculum</span>
+        </div>
+        <!-- Links -->
+        <div class="project-links">
+          <a href="#" target="_blank">Slides</a>
+          <a href="#" target="_blank">Camp PDF</a>
+          <a href="#" target="_blank">YouTube Teaser</a>
+        </div>
+      </div>
+
+      <!-- Project Card: Progress Tracker SaaS -->
+      <div class="project-card">
+        <h2>Progress Tracker for Student Teams</h2>
+        <p>SaaS MVP designed to help students and robotics teams track progress, receive AI-driven suggestions, and improve efficiency.</p>
+        <div class="project-tags">
+          <span class="tag">#SaaS</span>
+          <span class="tag">#AI</span>
+          <span class="tag">#Productivity</span>
+          <span class="tag">#MVP</span>
+        </div>
+        <div class="project-links">
+          <a href="#" target="_blank">Landing Page</a>
+          <a href="#" target="_blank">GitHub</a>
+          <a href="#" target="_blank">Coming Soon</a>
+        </div>
+      </div>
+
+      <!-- Project Card: VertiTrack Vertical Jump App -->
+      <div class="project-card">
+        <h2>VertiTrack: Vertical Jump Tracker</h2>
+        <p>Concept app that guides athletes through vertical jump training while tracking performance gains and body metrics.</p>
+        <div class="project-tags">
+          <span class="tag">#Fitness</span>
+          <span class="tag">#Basketball</span>
+          <span class="tag">#MobileApp</span>
+          <span class="tag">#Data</span>
+        </div>
+        <div class="project-links">
+          <a href="#" target="_blank">Designs</a>
+          <a href="#" target="_blank">Pitch Deck</a>
+          <a href="#" target="_blank">Progress Sheet</a>
+        </div>
+      </div>
+
+      <!-- Project Card: YouTube Channel -->
+      <div class="project-card">
+        <h2>YouTube Channel: Robotics & Tutorials</h2>
+        <p>Educational content on robotics, FLL camp, and business tutorials. Inspiring the next generation of builders and leaders.</p>
+        <div class="project-tags">
+          <span class="tag">#YouTube</span>
+          <span class="tag">#ContentCreation</span>
+          <span class="tag">#Education</span>
+        </div>
+        <div class="project-links">
+          <a href="#" target="_blank">Channel</a>
+        </div>
+      </div>
+
+      <!-- Project Card: FTC Programming -->
+      <div class="project-card">
+        <h2>FTC Programming & CAD</h2>
+        <p>Developed state machines for TeleOp, CAD/3D design, and contributed to Control Award submissions for robotics competitions.</p>
+        <div class="project-tags">
+          <span class="tag">#FTC</span>
+          <span class="tag">#Programming</span>
+          <span class="tag">#CAD</span>
+        </div>
+        <div class="project-links">
+          <a href="#" target="_blank">Control Award Template</a>
+        </div>
+      </div>
+
+      <!-- Project Card: Dual Credit Planning -->
+      <div class="project-card">
+        <h2>Dual Credit Planning System</h2>
+        <p>Internal planning chart for dual credit courses, STEM focus, and academic excellence at SHCA.</p>
+        <div class="project-tags">
+          <span class="tag">#Education</span>
+          <span class="tag">#STEM</span>
+          <span class="tag">#Planning</span>
+        </div>
+        <div class="project-links">
+          <a href="#" target="_blank">Planning Chart</a>
+        </div>
+      </div>
+
+      <!-- Project Card: Productivity Workflow -->
+      <div class="project-card">
+        <h2>Personal Productivity Workflow</h2>
+        <p>Public Notion-style board for daily schedule, productivity, and growth tracking.</p>
+        <div class="project-tags">
+          <span class="tag">#Productivity</span>
+          <span class="tag">#Workflow</span>
+        </div>
+        <div class="project-links">
+          <a href="#" target="_blank">Notion Board</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CALL TO ACTION: Contact & GitHub -->
+    <div class="portfolio-cta">
+      <h2 class="text-2xl font-semibold mb-4">Want to work with me or see more?</h2>
+      <a href="contact.html">Contact Me</a>
+      <a href="https://github.com/joselaurencio" target="_blank">View My GitHub</a>
+    </div>
   </main>
+  <!--
+    =========================
+    HOW TO EDIT THIS PAGE
+    =========================
+    - To add a new project: Copy a <div class="project-card">...</div> and fill in your info.
+    - To change categories: Edit the <div class="category-filter"> buttons.
+    - To add links: Edit the <div class="project-links"> inside each card.
+    - To change the intro: Edit the .portfolio-hero section.
+    - For more features (filtering, images, etc.), ask your AI assistant!
+  -->
 </body>
 </html>
