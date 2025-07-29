@@ -4,17 +4,112 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jose Laurencio | Portfolio</title>
+  <link rel="stylesheet" href="css/style.css" />
   <style>
-    body {
-      font-family: sans-serif;
-      padding: 40px;
-      background: #f5f7fa;
-      color: #111;
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1s ease-out forwards;
+    }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .cta-btn {
+      background: #1976d2;
+      color: #fff;
+      border: none;
+      padding: 0.75rem 2rem;
+      border-radius: 4px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+      margin-top: 1rem;
+    }
+    .cta-btn:hover {
+      background: #00bcd4;
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .feature {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      padding: 1.5rem;
+      min-height: 180px;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      animation-delay: 0.2s;
+    }
+    .quote {
+      margin-top: 2.5rem;
+      font-style: italic;
+      color: #1976d2;
+      font-size: 1.1rem;
+      text-align: center;
     }
   </style>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.fade-in').forEach((el, i) => {
+        el.style.animationDelay = (0.2 + i * 0.15) + 's';
+      });
+    });
+  </script>
 </head>
 <body>
-  <h1>Hello, I'm Jose Laurencio</h1>
-  <p>Welcome to my portfolio site. Projects, Robotics, and SaaS coming soon.</p>
+  <header>
+    <h1>Jose Laurencio</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero fade-in">
+      <h2>Engineer. Creator. Visionary. Elevating youth & tech with purpose.</h2>
+      <button class="cta-btn" onclick="window.location.href='portfolio.html'">Explore My Work</button>
+    </section>
+    <section class="features">
+      <div class="feature fade-in">
+        <h3>⚙️ Robotics Projects</h3>
+        <p>RoboCodex Camp, FLL/FTC, curriculum creation, and mentorship.</p>
+      </div>
+      <div class="feature fade-in">
+        <h3>📱 App Development & SaaS</h3>
+        <p>Vertical Jump Tracker, Progress Tracker SaaS, and more ideas in the works.</p>
+      </div>
+      <div class="feature fade-in">
+        <h3>📹 YouTube Content</h3>
+        <p>Robotics, tutorials, and business videos to inspire and teach.</p>
+      </div>
+      <div class="feature fade-in">
+        <h3>🎓 Academic Excellence</h3>
+        <p>Dual credit, math, physics, and a passion for learning and leadership.</p>
+      </div>
+      <div class="feature fade-in">
+        <h3>🧠 Personal Traits</h3>
+        <p>Ambitious, self-taught, Sabbath observer, and student leader.</p>
+      </div>
+    </section>
+    <div class="quote fade-in">“Excellence is not an act, but a habit.”</div>
+  </main>
 </body>
 </html>
