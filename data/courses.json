@@ -1,0 +1,12 @@
+[
+    {
+        "slug": "python-for-spike",
+        "title": "Python for SPIKE Prime",
+        "description": "Learn the fundamentals of Python programming with the LEGO SPIKE Prime robotics platform."
+    },
+    {
+        "slug": "fll-advanced-strategy",
+        "title": "FLL Advanced Strategy",
+        "description": "Master advanced strategies and techniques for FIRST LEGO League competitions."
+    }
+]
